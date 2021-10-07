@@ -32,7 +32,6 @@ export class DataService {
             abilities: singleres.abilities,
             imageurl: singleres['sprites']['front_default'],
           };
-
           return singleresdata;
         });
       })
