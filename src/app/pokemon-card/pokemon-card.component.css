@@ -1,0 +1,13 @@
+.cardclass {
+  padding: 1vw;
+}
+
+.simpleclass {
+  padding: 1vw;
+}
+
+.pokemonimage {
+  max-width: 10vw;
+  max-height: 10vw;
+  text-align: center !important;
+}

@@ -1,0 +1,48 @@
+<div class="cardclass">
+  <mat-card>
+    <mat-card-content
+      gdAreas="header header | side content | footer footer"
+      gdGap="16px"
+      gdRows="auto auto auto"
+      gdAreas.lt-md="header | side | content | footer"
+      gdRows.lt-md="auto auto auto auto"
+    >
+      <div class="simpleclass" gdArea="header">
+        <h1 style="text-align:center">{{ pokemondata.name }}</h1>
+      </div>
+      <div
+        class="simpleclass"
+        gdArea="side"
+        style="position: relative;margin:0 auto;"
+      >
+        <img mat-card-image [src]="pokemondata.url" class="pokemonimage" />
+      </div>
+      <div class="simpleclass" gdArea="content">
+        <!-- <div>Name : Pikachu</div> -->
+        <mat-list>
+          <mat-list-item>
+            <strong>Height </strong> : {{ pokemondata.height }}
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Weight </strong> : {{ pokemondata.weight }}
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+        <div></div>
+      </div>
+      <div class="simpleclass" gdArea="footer">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Abilities </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list *ngIf="pokemondata.abilities.length != 0">
+            <mat-list-item *ngFor="let singleability of pokemondata.abilities">
+              {{ singleability }}
+            </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
