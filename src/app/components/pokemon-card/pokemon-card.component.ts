@@ -9,4 +9,12 @@ import { PokemonModel } from '../../models/pokemon-model';
 export class PokemonCardComponent {
   @Input() pokemondata: PokemonModel;
   @Input() fulldata: any;
+
+  selectedfulldata: any;
+
+  ngOnInit() {
+    this.selectedfulldata = this.fulldata.filter(
+      (res) => res.name == this.pokemondata.name
+    )[0];
+  }
 }
