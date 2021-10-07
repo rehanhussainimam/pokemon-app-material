@@ -26,16 +26,19 @@ export class DataService {
       }),
       map((res) => {
         console.log('mapres', res);
-        return res.map((singleres: any) => {
-          let singleresdata: PokemonModel = {
-            name: singleres['name'],
-            weight: singleres['weight'],
-            height: singleres['height'],
-            abilities: singleres.abilities,
-            imageurl: singleres['sprites']['front_default'],
-          };
-          return singleresdata;
-        });
+        return {
+          singleresdata: res.map((singleres: any) => {
+            let singleresdata: PokemonModel = {
+              name: singleres['name'],
+              weight: singleres['weight'],
+              height: singleres['height'],
+              abilities: singleres.abilities,
+              imageurl: singleres['sprites']['front_default'],
+            };
+            return singleresdata;
+          }),
+          fullresdata: res,
+        };
       })
     );
   };
