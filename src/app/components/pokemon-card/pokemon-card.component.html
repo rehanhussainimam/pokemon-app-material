@@ -15,7 +15,7 @@
         gdArea="side"
         style="position: relative;margin:0 auto;"
       >
-        <img mat-card-image [src]="pokemondata.url" class="pokemonimage" />
+        <img mat-card-image [src]="pokemondata.imageurl" class="pokemonimage" />
       </div>
       <div class="simpleclass" gdArea="content">
         <!-- <div>Name : Pikachu</div> -->
@@ -38,7 +38,7 @@
           </mat-expansion-panel-header>
           <mat-list *ngIf="pokemondata.abilities.length != 0">
             <mat-list-item *ngFor="let singleability of pokemondata.abilities">
-              {{ singleability.abilityname }}
+              {{ singleability.ability.name }}
             </mat-list-item>
           </mat-list>
         </mat-expansion-panel>

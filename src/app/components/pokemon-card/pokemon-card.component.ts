@@ -5,10 +5,13 @@ export interface PokemonModel {
   height: string;
   weight: string;
   abilities: ability[];
+  imageurl: string;
 }
 
 export interface ability {
-  abilityname: string;
+  ability: {
+    name: string;
+  };
 }
 
 @Component({
