@@ -1,6 +1,6 @@
 # Features Implemented
 
-App Demo Here : https://angular-ivy-k3hu1m.stackblitz.io
+App Demo Here : https://stackblitz.com/edit/angular-ivy-k3hu1m
 
 # Resize to full screen and enjoy !! :D
 
