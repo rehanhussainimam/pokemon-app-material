@@ -13,6 +13,7 @@ export class ListComponent implements OnInit {
   currentpageindex: number;
   filterarguments: string[];
   offsetdata: number;
+  fulldata: any;
 
   ngOnInit() {
     this.numberofdatatolist = 5;
@@ -28,6 +29,7 @@ export class ListComponent implements OnInit {
       this.offsetdata
     ).subscribe((finalres) => {
       this.pokemondata = finalres.singleresdata;
+      this.fulldata = finalres.fullresdata;
       // this.filterarguments = Object.keys(this.pokemondata[0]);
       // console.log(this.filterarguments);
     });

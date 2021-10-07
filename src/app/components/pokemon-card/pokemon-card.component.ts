@@ -8,4 +8,5 @@ import { PokemonModel } from '../../models/pokemon-model';
 })
 export class PokemonCardComponent {
   @Input() pokemondata: PokemonModel;
+  @Input() fulldata: any;
 }
