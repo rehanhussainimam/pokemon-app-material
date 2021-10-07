@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     HttpClientModule,
     AppRoutingModule,
+    RouterModule,
   ],
   declarations: [
     AppComponent,
