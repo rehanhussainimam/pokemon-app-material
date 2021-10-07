@@ -27,8 +27,11 @@
             <strong>Weight </strong> : {{ pokemondata.weight }}
             <mat-divider></mat-divider>
           </mat-list-item>
+          <mat-list-item>
+            <a [routerLink]="'/details'">View Full Details</a>
+            <mat-divider></mat-divider>
+          </mat-list-item>
         </mat-list>
-        <div></div>
       </div>
       <div class="simpleclass" gdArea="footer">
         <mat-expansion-panel>
