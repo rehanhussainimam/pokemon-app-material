@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { forkJoin } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
+import { PokemonModel } from '../models/pokemon-model';
 
 @Injectable({
   providedIn: 'root',
