@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonModel } from './components/pokemon-card/pokemon-card.component';
+import { PokemonModel } from './models/pokemon-model';
 import { DataService } from './services/data.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -20,7 +20,5 @@ export class AppComponent implements OnInit {
   constructor(
     private DataService: DataService,
     private HttpClient: HttpClient
-  ) {
-
-  }
+  ) {}
 }

@@ -1,18 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-export interface PokemonModel {
-  name: string;
-  height: string;
-  weight: string;
-  abilities: ability[];
-  imageurl: string;
-}
-
-export interface ability {
-  ability: {
-    name: string;
-  };
-}
+import { PokemonModel } from '../../models/pokemon-model';
 
 @Component({
   selector: 'pokemon-card',
