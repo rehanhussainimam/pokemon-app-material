@@ -10,6 +10,5 @@
 1. Next and Previous page loads next and previous number of records (supports for number of records limit as well)
 1. Dropdown to change teh number of records to be shown
 1. Test cases not written (Since i just started basics of test cases a while ago..)
-1. Search and page navigation is not implemented yet
 
 # Note : I didnt have much time to do everything, For limited time of 1 to 2 hrs this is the max i could, only search will not work as expected.. Need more time to Implemente it and write test cases. I can improve it when i get time
