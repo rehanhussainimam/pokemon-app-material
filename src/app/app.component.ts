@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
     this.DataService.getalldata(this.numberofdatatolist).subscribe(
       (finalres) => {
         this.pokemondata = finalres;
-        this.filterarguments = Object.keys(this.pokemondata);
+        this.filterarguments = Object.keys(this.pokemondata[0]);
+        console.log(this.filterarguments);
       }
     );
   }
