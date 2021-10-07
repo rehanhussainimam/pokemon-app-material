@@ -38,7 +38,7 @@
           </mat-expansion-panel-header>
           <mat-list *ngIf="pokemondata.abilities.length != 0">
             <mat-list-item *ngFor="let singleability of pokemondata.abilities">
-              {{ singleability }}
+              {{ singleability.abilityname }}
             </mat-list-item>
           </mat-list>
         </mat-expansion-panel>

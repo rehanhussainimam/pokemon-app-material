@@ -1,3 +1,19 @@
 <h1>Start editing to see some magic happen :)</h1>
-
-<pokemon-card></pokemon-card>
+<div
+  fxLayout="row wrap"
+  fxLayout.lt-sm="column"
+  fxLayoutGap="1vw"
+  fxLayoutAlign="flex-start"
+>
+  <div
+    style="width:50vwl"
+    *ngFor="let singlepokemondata of testdata"
+    fxFlex="0 1 calc(25% - 1vw)"
+    fxFlex.lt-xl="0 1 calc(30% - 1vw)"
+    fxFlex.lt-lg="0 1 calc(40% - 1vw)"
+    fxFlex.lt-md="0 1 calc(50% - 1vw)"
+    fxFlex.lt-sm="100%"
+  >
+    <pokemon-card [pokemondata]="singlepokemondata"></pokemon-card>
+  </div>
+</div>
