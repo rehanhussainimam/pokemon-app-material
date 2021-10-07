@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 
 export interface PokemonModel {
   name: string;
-  height: number;
-  weight: number;
+  height: string;
+  weight: string;
   abilities: ability[];
 }
 
