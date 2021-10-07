@@ -14,10 +14,9 @@ export class AppComponent implements OnInit {
   currentpageindex: number;
   filterarguments: string[];
   offsetdata: number;
-  pagelist: number[] = [5, 10, 20, 50];
 
   ngOnInit() {
-    this.numberofdatatolist = this.pagelist[0];
+    this.numberofdatatolist = 5;
     this.loadPage(this.numberofdatatolist, 1, 0);
   }
 
@@ -51,7 +50,9 @@ export class AppComponent implements OnInit {
     );
   }
 
-  mySelectionChange($event) {
+  mySelectionChange = (value) => {
+    console.log(value);
+    this.numberofdatatolist = value;
     this.currentpageindex = 0;
     this.offsetdata = 0;
     this.loadPage(
@@ -59,7 +60,7 @@ export class AppComponent implements OnInit {
       this.currentpageindex + 1,
       this.offsetdata + this.numberofdatatolist
     );
-  }
+  };
 
   search() {}
 

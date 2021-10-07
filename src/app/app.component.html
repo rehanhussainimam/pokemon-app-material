@@ -12,11 +12,15 @@
 <mat-divider></mat-divider>
 <mat-form-field appearance="fill">
   <mat-label>Number of records to load</mat-label>
-  <select matNativeControl [(ngModel)]="numberofdatatolist" (selectionChange)="mySelectionChange($event)" required>
+  <select
+    matNativeControl
+    [(ngModel)]="numberofdatatolist"
+    (change)="mySelectionChange($event.value)"
+    required
+  >
     <option value="5">5</option>
     <option value="10">10</option>
     <option value="20">20</option>
-    <option value="50">50</option>
   </select>
 </mat-form-field>
 <mat-divider></mat-divider>
