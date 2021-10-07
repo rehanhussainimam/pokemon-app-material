@@ -1,5 +1,32 @@
 <h1>Pokemon Data</h1>
-<input [(ngModel)]="searchText" />
+<mat-divider></mat-divider>
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Search your pokemon in this List</mat-label>
+  <input
+    type="email"
+    matInput
+    placeholder="Ex. Pikachu"
+    [(ngModel)]="searchText"
+  />
+</mat-form-field>
+<mat-divider></mat-divider>
+<mat-form-field appearance="fill">
+  <mat-label>Number of records to load</mat-label>
+  <select matNativeControl [(ngModel)]="numberofdatatolist" (selectionChange)="mySelectionChange($event)" required>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="50">50</option>
+  </select>
+</mat-form-field>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-button-row">
+    <button mat-button (click)="previouspage()">Previous</button>
+    <button mat-button color="primary" (click)="nextpage()">Next</button>
+  </div>
+</section>
+<mat-divider></mat-divider>
 <div
   fxLayout="row wrap"
   fxLayout.lt-sm="column"

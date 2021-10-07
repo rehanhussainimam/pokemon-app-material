@@ -13,8 +13,10 @@ export class DataService {
 
   private url: string = 'https://pokeapi.co/api/v2/pokemon?';
 
-  getalldata = (limit: number) => {
-    return this.HttpClient.get(`${this.url}limit=${limit}&offset=0`).pipe(
+  getalldata = (limit: number, offset: number) => {
+    return this.HttpClient.get(
+      `${this.url}limit=${limit}&offset=${offset}`
+    ).pipe(
       mergeMap((mergemapres: any[]) => {
         let mymergemaparray: any[] = [];
         mymergemaparray = mergemapres['results'].map((single: any) => {

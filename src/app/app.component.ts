@@ -13,17 +13,55 @@ export class AppComponent implements OnInit {
   numberofpages: number;
   currentpageindex: number;
   filterarguments: string[];
+  offsetdata: number;
+  pagelist: number[] = [5, 10, 20, 50];
 
   ngOnInit() {
-    this.numberofdatatolist = 10;
-    this.DataService.getalldata(this.numberofdatatolist).subscribe(
-      (finalres) => {
-        this.pokemondata = finalres;
-        this.filterarguments = Object.keys(this.pokemondata[0]);
-        console.log(this.filterarguments);
-      }
+    this.numberofdatatolist = this.pagelist[0];
+    this.loadPage(this.numberofdatatolist, 1, 0);
+  }
+
+  loadPage = (numberofdatatolist, currentpageindex, offsetdata) => {
+    this.numberofdatatolist = numberofdatatolist;
+    this.currentpageindex = currentpageindex;
+    this.offsetdata = offsetdata;
+    this.DataService.getalldata(
+      this.numberofdatatolist,
+      this.offsetdata
+    ).subscribe((finalres) => {
+      this.pokemondata = finalres;
+      this.filterarguments = Object.keys(this.pokemondata[0]);
+      console.log(this.filterarguments);
+    });
+  };
+
+  previouspage() {
+    this.loadPage(
+      this.numberofdatatolist,
+      this.currentpageindex - 1,
+      this.offsetdata - this.numberofdatatolist
     );
   }
+
+  nextpage() {
+    this.loadPage(
+      this.numberofdatatolist,
+      this.currentpageindex + 1,
+      this.offsetdata + this.numberofdatatolist
+    );
+  }
+
+  mySelectionChange($event) {
+    this.currentpageindex = 0;
+    this.offsetdata = 0;
+    this.loadPage(
+      this.numberofdatatolist,
+      this.currentpageindex + 1,
+      this.offsetdata + this.numberofdatatolist
+    );
+  }
+
+  search() {}
 
   constructor(private DataService: DataService) {}
 }
