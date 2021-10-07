@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
+import { SearchFilter } from './pipes/search.filter';
 
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -21,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     HttpClientModule,
   ],
-  declarations: [AppComponent, PokemonCardComponent],
+  declarations: [AppComponent, PokemonCardComponent, SearchFilter],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

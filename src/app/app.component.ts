@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonModel } from './models/pokemon-model';
 import { DataService } from './services/data.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'my-app',
@@ -10,15 +9,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   pokemondata: PokemonModel[];
+  numberofdatatolist: number;
+  numberofpages: number;
+  currentpageindex: number;
+  filterarguments: string[];
 
   ngOnInit() {
-    this.DataService.getalldata().subscribe(
-      (finalres) => (this.pokemondata = finalres)
+    this.numberofdatatolist = 10;
+    this.DataService.getalldata(this.numberofdatatolist).subscribe(
+      (finalres) => {
+        this.pokemondata = finalres;
+        this.filterarguments = Object.keys(this.pokemondata);
+      }
     );
   }
 
-  constructor(
-    private DataService: DataService,
-    private HttpClient: HttpClient
-  ) {}
+  constructor(private DataService: DataService) {}
 }

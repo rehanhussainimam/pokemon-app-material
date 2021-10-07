@@ -11,10 +11,10 @@ import { PokemonModel } from '../models/pokemon-model';
 export class DataService {
   constructor(private HttpClient: HttpClient) {}
 
-  private url: string = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0';
+  private url: string = 'https://pokeapi.co/api/v2/pokemon?';
 
-  getalldata = () => {
-    return this.HttpClient.get(this.url).pipe(
+  getalldata = (limit: number) => {
+    return this.HttpClient.get(`${this.url}limit=${limit}&offset=0`).pipe(
       mergeMap((mergemapres: any[]) => {
         let mymergemaparray: any[] = [];
         mymergemaparray = mergemapres['results'].map((single: any) => {
