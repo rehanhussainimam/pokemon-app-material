@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { SearchFilter } from './pipes/search.filter';
+
+import { ListComponent } from './components/pages/list/list.component';
+import { DetailsComponent } from './components/pages/details/details.component';
 
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -21,8 +25,15 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     FlexLayoutModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
-  declarations: [AppComponent, PokemonCardComponent, SearchFilter],
+  declarations: [
+    AppComponent,
+    PokemonCardComponent,
+    SearchFilter,
+    ListComponent,
+    DetailsComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
