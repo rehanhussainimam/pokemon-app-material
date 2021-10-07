@@ -51,14 +51,12 @@ export class AppComponent implements OnInit {
   }
 
   mySelectionChange = (value) => {
-    console.log(value);
-    this.numberofdatatolist = value;
     this.currentpageindex = 0;
     this.offsetdata = 0;
     this.loadPage(
       this.numberofdatatolist,
       this.currentpageindex + 1,
-      this.offsetdata + this.numberofdatatolist
+      this.offsetdata
     );
   };
 
