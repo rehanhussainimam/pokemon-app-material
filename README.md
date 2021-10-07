@@ -9,4 +9,4 @@
 1. Material design is used to show records
 1. Test cases not written (Since i just started basics of test cases a while ago..)
 
-# For limited time of 1 to 2 hrs this is the max i could, only search will not work as expected.. Need more time to Implemente it
+# Note : For limited time of 1 to 2 hrs this is the max i could, only search will not work as expected.. Need more time to Implemente it
