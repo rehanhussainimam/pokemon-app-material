@@ -1,9 +1,9 @@
 # Features Implemented
 
-1. Grid Card that works for all screens
+1. Grid Card that works for all screens responsively
+1. Card View changes its alignment based on the screen size
 1. Load List of Pokemon and load its detail using mergeMap & forkJoin
 1. Abilities shown as accordian
-1. Card View changes its alignment based on the screen size
 1. Search works only for the list of records loaded
 1. Next and Previous page loads next number of records
 1. Material design is used to show records
