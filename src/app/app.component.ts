@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     this.loadPage(
       this.numberofdatatolist,
       this.currentpageindex - 1,
-      this.offsetdata - this.numberofdatatolist
+      this.offsetdata - Number(this.numberofdatatolist)
     );
   }
 
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     this.loadPage(
       this.numberofdatatolist,
       this.currentpageindex + 1,
-      this.offsetdata + this.numberofdatatolist
+      this.offsetdata + Number(this.numberofdatatolist)
     );
   }
 
