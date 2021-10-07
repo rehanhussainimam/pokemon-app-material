@@ -21,20 +21,6 @@ export class AppComponent implements OnInit {
     private DataService: DataService,
     private HttpClient: HttpClient
   ) {
-    // this.pokemondata = [
-    //   {
-    //     name: 'Pikachu',
-    //     height: '10 cm',
-    //     weight: '10 kg',
-    //     abilities: [
-    //       {
-    //         abilityname: 'Thunderbolt',
-    //       },
-    //       {
-    //         abilityname: 'Fire Attack',
-    //       },
-    //     ],
-    //   },
-    // ];
+
   }
 }
